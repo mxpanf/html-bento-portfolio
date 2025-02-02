@@ -1,0 +1,211 @@
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Bento Portfolio</title>
+    <meta name="description" content="Bento-like portfolio webpage in bare HTML, CSS & JS.">
+    <meta name="keywords" content="bento, portfolio, webpage">
+    <meta name="author" content="MxPanf">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Simple Bento Portfolio">
+    <meta property="og:description" content="Bento-like portfolio webpage in bare HTML, CSS & JS.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Portfolio">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="canonical" href="https://yourwebsite.com">
+
+    <!-- Fonts & Styles -->
+    <link href="https://unpkg.com/@codersrank/activity/codersrank-activity.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Third-party Libraries & Scripts -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://unpkg.com/@codersrank/activity/codersrank-activity.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- SEO & Robots -->
+    <meta name="robots" content="index, follow">
+  </head>
+  
+  <body class="light-theme">
+    <!-- Loader (Terminal Style) -->
+    <div id="loader">
+      <div class="terminal">
+        <span id="typing-text"></span>
+        <span class="cursor">█</span>
+      </div>
+    </div>  
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">
+        <span class="iconify theme-icon sun" data-icon="mdi:weather-sunny"></span>
+        <span class="iconify theme-icon moon" data-icon="mdi:weather-night"></span>
+      </button>
+    </div>
+    
+    <div class="page-container">
+    <main class="content">
+    <div class="container">
+      <div class="grid">
+        <!-- Welcome Section -->
+        <div class="card welcome">
+          <div class="welcome-content">
+            <h2 class="welcome-title">Welcome</h2>
+            <div class="profile-container">
+              <div class="profile-content">
+                <p>
+                  Hi! I'm <strong>[Your Name]</strong>. A passionate developer focused on
+                  creating impactful solutions.
+                </p>
+                <p>
+                  With over [X] years of experience in web development, I
+                  specialize in creating user-centric applications that solve
+                  real-world problems. My approach combines technical expertise
+                  with creative problem-solving.
+                </p>
+                <div class="welcome-social-links">
+                  <a href="https://github.com/mxpanf" target="_blank" class="welcome-social-link">
+                    <span class="iconify social-icon" data-icon="mdi:github" data-inline="false"></span>
+                  </a>
+                  <a href="https://linkedin.com/in/mxpanf" target="_blank" class="welcome-social-link">
+                    <span class="iconify social-icon" data-icon="mdi:linkedin" data-inline="false"></span>
+                  </a>
+                  <a href="https://t.me/mxpanf" target="_blank" class="welcome-social-link">
+                    <span class="iconify social-icon" data-icon="mdi:telegram" data-inline="false"></span>
+                  </a>
+                </div>                
+              </div>
+              <div class="profile-photo">
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="40" r="25" fill="currentColor" />
+                  <circle cx="50" cy="95" r="35" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="card about">
+          <h2>About Me</h2>
+          <p>
+            Full-stack developer with a passion for creating elegant solutions
+            to complex problems. Focused on web technologies and cloud
+            architecture.
+          </p>
+
+          <div class="divider"></div>
+
+          <h3>Preferred Technologies</h3>
+          <div class="badge-container tech-badges">
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:html-5" data-inline="false"></span>
+              <span>HTML</span>
+            </div>
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:css-3" data-inline="false"></span>
+              <span>CSS</span>
+            </div>
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:javascript" data-inline="false"></span>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:netlify-icon" data-inline="false"></span>
+              <span>Netlify</span>
+            </div>
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:openai-icon" data-inline="false"></span>
+              <span>ChatGPT</span>
+            </div>
+            <div class="tech-badge">
+              <span class="iconify tech-icon" data-icon="logos:github-icon" data-inline="false"></span>
+              <span>GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="card experience">
+          <h2>Latest experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">
+                Apr 2023 - Present
+                <span class="timeline-duration">(8 mos.)</span>
+              </div>
+              <div class="timeline-company">TechCorp Solutions</div>
+              <div class="timeline-position">Senior Frontend Developer</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">
+                Jan 2022 - Mar 2023
+                <span class="timeline-duration">(1 yr. 3 mos.)</span>
+              </div>
+              <div class="timeline-company">Digital Innovations Inc.</div>
+              <div class="timeline-position">Frontend Developer</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">
+                Jun 2020 - Dec 2021
+                <span class="timeline-duration">(1 yr. 7 mos.)</span>
+              </div>
+              <div class="timeline-company">StartUp Hub</div>
+              <div class="timeline-position">Junior Developer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timezone Section -->
+        <div class="card timezone">
+          <h2>Timezone</h2>
+          <div class="clock-container">
+            <div id="clock" class="clock"></div>
+            <div class="timezone-info">UTC+0 (Etc/UCT)</div>
+          </div>
+        </div>
+
+        <!-- Now Section -->
+        <div class="card now">
+          <div class="now-header">
+            <h2>Now</h2>
+            <div class="status-dot"></div>
+          </div>
+          <a href="https://sive.rs/nowff" class="now-subtitle" target="_blank" rel="noopener noreferrer">
+            What's that?
+          </a>
+          <p>The Smart Presence API is being developed</p>
+        </div>
+        
+        <!-- Activity Section -->
+        <div class="card git-graph">
+          <h2>Activity</h2>
+          <codersrank-activity
+              username="mxpanf"
+              labels
+              tooltip
+              branding="false"
+              legend
+              colors='{"background": "transparent", "grid": "#e5e5e5", "grade4": "#216e39", "grade3": "#30a14e", "grade2": "#40c463", "grade1": "#9be9a8", "grade0": "#ebedf0"}'>
+          </codersrank-activity>
+      </div>
+      </main>
+      </div>
+
+      <!-- Footer Section -->
+      <footer class="site-footer">
+        <p>© 2025 · Crafted with ♥️ using HTML, CSS & JS by MxPanf.</p>
+      </footer>      
+  </body>
+</html>
